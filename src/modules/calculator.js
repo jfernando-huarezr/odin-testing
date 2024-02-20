@@ -1,14 +1,20 @@
+//multiplication and division round to 2 decimals
+
 const calculator = {
-  sum: function (a, b) {
+  add: function (a, b) {
     return a + b;
   },
-  rest: function (a, b) {
+  subtract: function (a, b) {
     return a - b;
   },
-  div: function (a, b) {
-    return a / b;
+  divide: function (a, b) {
+    const answer = a / b;
+    return Number.isInteger(answer) ? answer : Math.round(answer * 100) / 100;
   },
-  mul: function (a, b) {
-    return a * b;
+  multiply: function (a, b) {
+    const answer = a * b;
+    return Number.isInteger(answer) ? answer : Math.round(answer * 100) / 100;
   },
 };
+
+export { calculator };
