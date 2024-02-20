@@ -1,3 +1,5 @@
+import reverseString from "../modules/reverseString.js";
+
 test("only accepts strings", () => {
   const invalidInputs = [
     1234,
@@ -9,6 +11,10 @@ test("only accepts strings", () => {
     "",
   ];
   invalidInputs.forEach((input) => {
-    expect(() => capitalize(input)).toThrow();
+    expect(() => reverseString(input)).toThrow();
   });
+});
+
+test("it should reverse", () => {
+  expect(reverseString("alberto")).toBe("otrebla");
 });
